@@ -18,7 +18,6 @@ function _drawActive() {
 }
 export class PokeAPIPokemonsController {
   constructor() {
-    console.log('hello from the Poke API Pokemon Controller');
     this.fetchPokemon()
     appState.on('pokemons', _drawPokemon)
     appState.on('activePokemon', _drawActive)

@@ -1,1 +1,46 @@
 /* BASIC STYLES HERE */
+.bg-img {
+  background-image: url("https://s3-alpha-sig.figma.com/img/39ea/8f79/f356d984629d52086b6a8787645a1168?Expires=1679875200&Signature=WcXjyGJLfl~1-C1vVoy7a3NTse-rSgOH0nrgM~OMpv4tE~K0IrRSw5TEloIF8hlPgvlubSFfLrEro8fhpDK47YtVwRHW9lmUAERqB3UCV3JSKi-Zkr1mtODzau99PTAkfgfv0T98Nfma~lh8A9cCQZJD6r8U0OJ94IozGmKeIqnTVBv-vhQ9LmVZ5uSeklckUwhb95npZt2~FswaJf4sAWNDhKvDvdqiJ86SQRraR~mwLOPN20XhVsiCDTMAXK6KB0Lk9Z9354Pabvwt5kXdqcgaNCXBskNU7vc7pmdMvxAb2TYmLp-GqKk1-SdPMkz9TSfwXfQOGp3bL6seYdOlOQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+  background-position: center;
+  background-size: cover
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.my-poke-button {
+  position: fixed;
+  right: 20px;
+}
+
+.active-card {
+  background-color: #E93031;
+  border: solid black 5px;
+  border-radius: 5px;
+  margin-top: 2em;
+  text-align: center;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.text-container {
+  background-color: white;
+  border: solid #F8979C 5px;
+}
+
+img {
+  max-height: 50vh;
+}
+
+.poke-img {
+  min-height: 35vh;
+}
+
+.my-list-card {
+  background-color: white;
+  border: solid black 4px;
+  border-radius: 5px;
+  margin-top: 2em;
+  padding-left: 1em;
+}

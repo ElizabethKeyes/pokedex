@@ -14,6 +14,7 @@ function _drawMyPokemon() {
 export class SandboxPokemonsController {
   constructor() {
     this.fetchPokemon()
+    appState.on('myPokemon', _drawMyPokemon)
   }
 
   async catchPokemon(name) {
@@ -28,11 +29,22 @@ export class SandboxPokemonsController {
 
   async fetchPokemon() {
     try {
-      sandboxPokemonsService.fetchPokemon()
+      await sandboxPokemonsService.fetchPokemon()
     } catch (error) {
       console.error(error)
       Pop.error(error)
     }
+  }
+
+  // TODO need to come back and write this function to remove the selected pokemon from the appstate array as well the sandbox
+  async release(id) {
+    try {
+      sandboxPokemonsService.release(id)
+    } catch (error) {
+      console.error(error)
+      Pop.error(error)
+    }
+
   }
 
 }

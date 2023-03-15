@@ -31,7 +31,11 @@ export class Pokemon {
 
   static MyPokemonListTemplate(pokemon) {
     return `
-    <h5><i class="mdi mdi-pokeball text-danger"></i> ${pokemon.name}</h5><br>
+    <div class="d-flex justify-content-between">
+    <h5><i class="mdi mdi-pokeball text-danger"></i> ${pokemon.name}</h5>
+    <i class="mdi mdi-exit-to-app text-danger text-end" title="Release" onclick="app.sandboxPokemonsController.release('${pokemon.id}')"></i>
+    <br>
+    </div>
     `
   }
 

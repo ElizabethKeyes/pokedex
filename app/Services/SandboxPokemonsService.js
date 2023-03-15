@@ -14,11 +14,18 @@ class SandboxPokemonsService {
     let res = await sandbox.post('pokemon', pokemon)
     console.log(res.data, 'new pokemon');
     appState.myPokemon.push(new Pokemon(res.data))
+    appState.emit('myPokemon')
   }
 
   async fetchPokemon() {
     let res = await sandbox.get('pokemon')
-    console.log(res.data);
+    appState.myPokemon = res.data
+  }
+
+  async release(id) {
+    appState.myPokemon = appState.myPokemon.filter(p => p.id != id)
+    await sandbox.delete(`pokemon/${id}`)
+
   }
 }
 

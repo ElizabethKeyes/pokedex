@@ -4,6 +4,7 @@ import { pokeAPIPokemonsService } from "../Services/PokeAPIPokemonsService.js";
 import { Pop } from "../Utils/Pop.js";
 import { setHTML } from "../Utils/Writer.js";
 
+// TODO need to include some logic to mark the pokeballs as red if they are owned. Will need to happen on the template in the controller. Might have to use a getter?
 function _drawPokemon() {
   let pokemons = appState.pokemons
   let template = ''
